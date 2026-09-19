@@ -1,0 +1,22 @@
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Ambientes Virtuais
+venv/
+env/
+
+# Pastas e arquivos do PyInstaller
+build/
+dist/
+*.spec
+
+# Arquivos de dados de alunos e relatórios
+*.html
+*.htm
+*.xlsx
+*.csv
+
+# Sistema Operacional
+.DS_Store
+Thumbs.db
