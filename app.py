@@ -2,7 +2,7 @@ import os
 import tkinter as tk
 from tkinter import filedialog, messagebox
 # Importa as funções puras do arquivo processador.py
-from processador import processar_pasta_relatorios, gerar_excel_fluencia
+from processador import processar_pasta_relatorios, gerar_excel_fluencia 
 
 def executar_interface():
     pasta_selecionada = filedialog.askdirectory(title="Selecione a pasta com os relatórios do e-educa")
@@ -15,7 +15,7 @@ def executar_interface():
         messagebox.showwarning("Aviso", "Nenhum relatório HTML válido foi encontrado na pasta selecionada.")
         return
 
-    caminho_saida = os.path.join(pasta_selecionada, "Relatorio_Anual_Fluencia.xlsx")
+    caminho_saida = os.path.join(pasta_selecionada, f"Relatorio_Anual_Fluencia_{info_cabecalho["Turma"]}.xlsx")
     gerar_excel_fluencia(dados_alunos, info_cabecalho, caminho_saida)
 
     bimestres_str = ", ".join(sorted(bimestres))
